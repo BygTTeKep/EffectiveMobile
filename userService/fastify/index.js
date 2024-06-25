@@ -8,7 +8,7 @@ const app = fastify({ logger: { level: 'error' } });
 
 app.register(fastifyPostgres, {
     connectionString:
-        'postgres://postgres:5v3G584ob5mxy5i9hS8X8F3@postgres-service:5432/Testovoe',
+        'postgres://postgres:o5hapLMEM1@postgres-service:5432/Testovoe',
 });
 
 app.register(fastifyCors, {

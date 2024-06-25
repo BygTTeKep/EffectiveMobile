@@ -11,7 +11,7 @@ import { HistoryModule } from './history/history.module';
       type: 'postgres',
       host: 'postgres-service',
       port: 5432,
-      password: '5v3G584ob5mxy5i9hS8X8F3',
+      password: 'o5hapLMEM1',
       username: 'postgres',
       entities: [History],
       database: 'Testovoe',
