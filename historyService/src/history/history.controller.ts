@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { HistoryService } from './history.service';
 import { CreateHistoryDto } from './dto/create-history.dto';
 
@@ -15,7 +15,11 @@ export class HistoryController {
     return this.historyService.allUsersHistory();
   }
   @Get(':id')
-  findOneById(@Param('id') id: string) {
-    return this.historyService.viewUserHistory(+id);
+  findOneById(
+    @Param('id') id: string,
+    @Query() query: { filter?: string; page?: string },
+  ) {
+    const { filter, page } = query;
+    return this.historyService.viewUserHistory(+id, filter, page);
   }
 }

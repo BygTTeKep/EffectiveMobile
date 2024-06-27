@@ -8,7 +8,7 @@ services:
             - '5432:5432'
         environment:
             - POSTGRES_USER=postgres
-            - POSTGRES_PASSWORD=5v3G584ob5mxy5i9hS8X8F3
+            - POSTGRES_PASSWORD=o5hapLMEM1
             - POSTGRES_DB=Testovoe
         networks:
             - testovoe

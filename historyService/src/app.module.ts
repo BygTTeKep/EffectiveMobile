@@ -4,6 +4,7 @@ import { HistoryService } from './history/history.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { History } from './history/entity/history.entity';
 import { HistoryModule } from './history/history.module';
+import { Users } from './history/entity/users.entity';
 
 @Module({
   imports: [
@@ -13,9 +14,10 @@ import { HistoryModule } from './history/history.module';
       port: 5432,
       password: 'o5hapLMEM1',
       username: 'postgres',
-      entities: [History],
+      entities: [History, Users],
       database: 'Testovoe',
       synchronize: true,
+      autoLoadEntities: true,
       logging: true,
     }),
     HistoryModule,
