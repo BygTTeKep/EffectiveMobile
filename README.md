@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Effective Mobile Тестовое задание</title>
 </head>
 <body>
     <h1>Effective Mobile Тестовое задание</h1>
