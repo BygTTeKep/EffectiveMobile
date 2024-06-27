@@ -16,7 +16,7 @@ export class HistoryService {
   viewUserHistory(
     user_id: number,
     filter: string = 'ASC',
-    page: number = 1,
+    page: number = 0,
   ): Promise<History> {
     const result = this.historyRepository.query(
       `

@@ -20,6 +20,6 @@ export class HistoryController {
     @Query() query: { filter?: string; page?: string },
   ) {
     const { filter, page } = query;
-    return this.historyService.viewUserHistory(+id, filter, page);
+    return this.historyService.viewUserHistory(+id, filter, Number(page));
   }
 }

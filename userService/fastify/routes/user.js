@@ -1,21 +1,4 @@
 const usersRoutes = async (fastify, options) => {
-    fastify.post('initDb', async (req, res) => {
-        try {
-            fastify.pg.query(
-                `
-                CREATE TABLE IF NOT EXISTS users (
-                id bigserial primary key, 
-                login varchar(20) NOT NULL, 
-                password varchar(255) NOT NULL,
-                email varchar(25) NOT NULL,
-                date_created timestamp NOT NULL DEFAULT NOW()
-                )`
-            );
-        } catch (err) {
-            if (err instanceof Error) fastify.log.error(err.message);
-        }
-    });
-
     fastify.post('/create', async (req, res) => {
         const { login, password, email } = req.body;
         try {
