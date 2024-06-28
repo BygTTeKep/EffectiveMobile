@@ -21,7 +21,7 @@ export class HistoryService {
     const result = this.historyRepository.query(
       `
       SELECT * FROM history WHERE user_id=$1 ORDER BY $2 LIMIT $3 OFFSET $4`,
-      [user_id, filter, 10, page],
+      [user_id, filter, 10, page * 10],
     );
     return result;
     // return this.historyRepository.findOneBy({ user_id: user_id });
